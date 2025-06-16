@@ -1,0 +1,203 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: repeating-linear-gradient(to bottom, #0f0a1e, #0f0a1e 2px, #140e29 2px, #140e29 4px);
+  font-size: 10px;
+}
+
+.zoom-inner-text {
+  background: black;
+  color:white;
+  height: 50px;
+  padding:10px;
+
+
+}
+
+.zoom-inner-text:hover {
+  background: white;
+  color:black;
+
+}
+
+.zoom-inner[title1]:hover:after {
+  content: attr(title1);
+  position: absolute;
+  //top: 80px;
+  bottom: 30px;
+  right: 50px;
+  width: 250px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  color: white;
+  background:black;
+  padding: 5px;
+}
+
+.zoom-inner_2[title1]:hover:after {
+  content: attr(title1);
+  position: absolute;
+  //top: 80px;
+  bottom: 30px;
+  right: 50px;
+  width: 250px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  color: white;
+  background:black;
+  padding: 5px;
+}
+
+.zoom-inner_3[title1]:hover:after {
+  content: attr(title1);
+  position: absolute;
+  //top: 80px;
+  bottom: 30px;
+  right: 50px;
+  width: 250px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  color: white;
+  background:black;
+  padding: 5px;
+}
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+#game {
+/*  display:none;*/
+}
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 900px;
+}
+
+body {
+	background-color: #5f5e5c;
+  @font-family: 'Press Start 2P', cursive;
+	//font-family: Helvetica, Arial, sans-serif;
+	color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.page-title {
+	text-align: center;
+	padding: 1rem;
+	margin: 1rem 0;
+	background-color: white;
+	color: #5f5e5c;
+	box-shadow: 0 0.4rem 1.2rem -0.4rem rgba(0,0,0,0.5);
+}
+
+
+/* Gallery */
+/* These four stylings deal mainly with laying out
+ * the column structure of the gallery
+ */
+
+.gallery {
+	padding: 0.25rem;	
+	background-color: white;
+	box-shadow: 0 1.5rem 5rem -1rem rgba(0,0,0,0.5);
+}
+.col {
+	float: left;
+	padding: 0.25rem;
+}
+
+.col-3 {
+	width: 33.3333333%;
+}
+
+.col-4 {
+	width: 25%;
+}
+
+/* These two are the meat and potatoes of the zoom effect*/
+/* Zoom-hover is the parent class, whose overflow is set to hidden,
+ * and is the wrapper for the image.
+ * Zoom-inner is the inner content that has the actual image as a
+ * background-image so we can use background-size cover
+ * When you hover over zoom-hover, we adjust the size of zoom-inner
+ * to a larger percentage, 125% in this case and transition it's size
+ * over the given tranisiton time (750ms).
+ * The first four attributes center this element, note that the zoom-hover
+ * is position relative so we can position in the inner div absolutely
+ */
+.zoom-hover {
+	position: relative;
+	overflow: hidden;
+  cursor: pointer;
+}
+
+.zoom-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: all 750ms ease-in-out;
+	z-index: 1;
+}
+
+.zoom-inner_2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: all 750ms ease-in-out;
+	z-index: 1;
+}
+
+.zoom-inner_3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: all 750ms ease-in-out;
+	z-index: 1;
+}
+.zoom-hover:hover > div {
+	width: 125%;
+	height: 125%;
+}
+
+/* 3:2 aspect ratio */
+.three-two {
+	padding-top: 60.66%;
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) { .col-3, .col-4 { width: 50%  } }
+@media screen and (max-width: 480px) { .col-3, .col-4 { width: 100% } }

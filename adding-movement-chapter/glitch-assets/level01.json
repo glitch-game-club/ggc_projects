@@ -1,0 +1,8 @@
+{
+    "platforms": [
+        {"image": "ground", "x": 0, "y": 325},
+        {"image": "grass:4x1", "x": 150, "y": 240},
+        {"image": "grass:4x1", "x": 300, "y": 160},
+        {"image": "grass:4x1", "x": 75, "y": 100}    
+				]
+}
